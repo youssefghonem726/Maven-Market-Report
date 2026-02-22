@@ -87,7 +87,7 @@ Tools Used
 
 Power BI Desktop
 
-DAX (Data Analysis Expressions)
+DAX 
 
 Power Query
 
@@ -100,5 +100,24 @@ This project demonstrates the ability to transform raw transactional data into s
 
 It showcases skills in data modeling, DAX calculations, trend analysis, performance evaluation, and executive-level reporting.
 
+--- 
+---
 
+## Dashboard Preview
+
+### Topline Performance Dashboard
+![Dashboard Overview](Screenshots/dashboard_overview.png)
+
+### Key Performance Highlights
+![Performance Insights](Screenshots/insights_page.png)
+
+---
+
+## Data Model
+![Data Model](Screenshots/data_model.png)
+
+---
+
+## Power Query Transformations
+![Power Query](Screenshots/power_query.png)
 
