@@ -102,5 +102,3 @@ It showcases skills in data modeling, DAX calculations, trend analysis, performa
 
 
 
-```DAX
-Revenue Gap = [Total Revenue (After Discount)] - [Revenue Target]
