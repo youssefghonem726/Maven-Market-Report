@@ -1,34 +1,35 @@
-# Maven Market Sales & Performance Analysis (Power BI)
+# Maven Market Retail Sales & Performance Dashboard (Power BI)
 
 ---
 
 ## Project Overview
 
-Maven Market is a fictional multi-national grocery chain operating in Canada, Mexico, and the United States.
+Maven Market is a fictional multi-national grocery retail chain operating across the United States, Canada, and Mexico.
 
-This project analyzes transactional data to evaluate sales performance, product profitability, customer behavior, and revenue trends. An interactive Power BI dashboard was developed to support management in making data-driven decisions.
+This project delivers an end-to-end Business Intelligence solution built in Power BI to analyze transactional retail data and provide executive-level visibility into sales performance, profitability, return behavior, and regional contribution.
 
----
-
-## Business Problem
-
-Management aims to leverage transaction data to improve performance monitoring, product evaluation, and regional efficiency.
-
-The dashboard was designed to answer:
-
-- What were the top 30 brands by transaction volume?
-- How did transactions, profit, and returns compare to last month?
-- Which countries and stores generated the most transactions?
-- What was the weekly revenue trend?
-- Did revenue exceed target?
+The objective was to transform raw CSV data into a structured analytical model and interactive dashboard to support data-driven decision-making.
 
 ---
 
-## Data Sources & Modeling
+## Business Objectives
+
+The dashboard was designed to answer critical business questions:
+
+- Which brands generate the highest transaction volume?
+- How do current month transactions, profit, and returns compare to last month?
+- Which countries and store locations drive the most sales?
+- How is revenue trending over time?
+- Is actual revenue exceeding performance targets?
+- Which products present return risk?
+
+---
+
+## Data Sources & Data Modeling
 
 The data model was built using 8 raw CSV files:
 
-- Transactions (2 files 1998-1997)
+- Transactions (1997–1998)
 - Returns
 - Products
 - Customers
@@ -36,32 +37,44 @@ The data model was built using 8 raw CSV files:
 - Regions
 - Calendar
 
-A star schema was implemented with `Transaction_Data` as the central fact table, connected to dimension tables including Products, Customers, Stores, Regions, and Calendar.
+A **Star Schema** was implemented with `Transaction_Data` as the central fact table, connected to dimension tables:
 
-The calendar table was enhanced using date intelligence techniques, adding:
+- Products
+- Customers
+- Stores
+- Regions
+- Calendar
+
+The calendar table was enhanced with additional date intelligence fields:
 
 - Start of Week
 - Start of Month
 - Month Name
-- Year and Quarter fields
+- Quarter
+- Year
+
+This structure ensures scalability, optimized relationships, and clean analytical filtering.
 
 ---
 
 ## Data Preparation (Power Query)
 
-Data cleaning and transformation steps included:
+Data transformation steps included:
 
-- Merging transaction files
-- Handling data types and formatting
-- Creating calculated columns (e.g., Price Tier)
-- Building a full address field for store analysis
-- Enhancing the calendar table with derived date columns
+- Merging historical transaction files
+- Data type standardization
+- Removing inconsistencies
+- Creating calculated columns (e.g., Price Tier classification)
+- Building full store address fields
+- Enhancing calendar intelligence fields
+
+Power Query was used to prepare the dataset for reliable analytical reporting.
 
 ---
 
-## DAX Measures
+## DAX & Performance Measures
 
-Key measures developed for performance tracking:
+Custom DAX measures were developed to support KPI tracking and executive reporting:
 
 - Total Revenue
 - Revenue Target
@@ -69,55 +82,62 @@ Key measures developed for performance tracking:
 - Total Transactions
 - Total Profit
 - Profit Margin
+- Return Rate
 - YTD Revenue
 - 60-Day Revenue
-- Return Rate
+- Month-over-Month comparisons
 
-## Key Insights
+These measures enabled dynamic performance monitoring and target evaluation.
+
+---
+
+## Key Business Insights
 
 - Overall revenue exceeded target by **$34.15K**, indicating strong aggregate performance.
 - The United States generated the highest transaction volume across all regions.
-- Plato delivers the highest profit margin, but its elevated return rate in Canada may pose long-term profitability risks.
-- Horatio records the highest return rate in the USA, suggesting potential product or quality concerns.
-- High Top experienced a sharp month-over-month increase in returns, signaling a recent performance shift.
+- Plato delivers the highest profit margin but shows elevated return rates in Canada, posing potential profitability risk.
+- Horatio records the highest return rate in the USA, suggesting possible product quality concerns.
+- High Top experienced a sharp month-over-month increase in returns, signaling a recent operational shift.
 
+These findings highlight both revenue opportunities and product risk factors requiring management attention.
 
 ---
-Tools Used
 
-Power BI Desktop
+## Tools & Technologies
 
-DAX 
+- Power BI Desktop
+- Power Query (ETL & Data Transformation)
+- DAX (Advanced KPI Calculations)
+- Star Schema Data Modeling
+- CSV Data Integration
 
-Power Query
-
-Data Modeling (Star Schema)
-
-CSV Data Sources
-## Conclusion
-
-This project demonstrates the ability to transform raw transactional data into structured insights using Power BI. 
-
-It showcases skills in data modeling, DAX calculations, trend analysis, performance evaluation, and executive-level reporting.
-
---- 
 ---
 
-## Dashboard Preview
+## Dashboard Screenshots
 
 ### Topline Performance Dashboard
-![Dashboard Overview](Screenshots/dashboard_overview.png)
-
+![Dashboard Overview](Screenshots/dashboard_overview.png) 
 ### Key Performance Highlights
 ![Performance Insights](Screenshots/insights_page.png)
-
----
-
+--- 
 ## Data Model
-![Data Model](Screenshots/data_model.png)
-
----
-
+![Data Model](Screenshots/data_model.png) 
+--- 
 ## Power Query Transformations
 ![Power Query](Screenshots/power_query.png)
 
+---
+
+## Conclusion
+
+This project demonstrates the ability to design and implement a structured retail Business Intelligence solution using Power BI.
+
+Through star schema modeling, custom DAX logic, and interactive dashboard design, the solution delivers:
+
+- Clear KPI monitoring
+- Regional performance comparison
+- Brand-level profitability analysis
+- Return behavior tracking
+- Target vs actual evaluation
+
+The dashboard translates transactional retail data into actionable business insights, reflecting practical, job-ready Business Intelligence capability.
